@@ -1,0 +1,37 @@
+body {
+  margin: 0;
+}
+
+.slider {
+  position: relative;
+  width: 50%;
+  margin: 130px auto;
+  overflow: hidden;
+}
+.slider_slides {
+  display: none;
+}
+.slider_slide {
+  width: 100%;
+}
+
+.slider_slides.active {
+  display: block;
+}
+
+.previous, .next {
+  color: black;
+  font-size: 40px;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  cursor: pointer;
+}
+
+.previous {
+  left: 400px;
+}
+
+.next {
+  right: 400px;
+}/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,31 @@
+.slider {
+    position: relative;
+    width: 50%;
+    margin: 130px auto;
+    overflow: hidden;
+    &_slides{
+        display: none;
+    }
+    &_slide{
+        width: 100%;
+    }
+}
+
+
+.slider_slides.active{
+    display: block;
+}
+
+.previous,.next{
+    @include position;
+    color: black;
+    font-size: 40px;
+    transform: translate(0,-50%);
+    cursor: pointer;
+}
+.previous{
+    left: 400px;
+}
+.next{
+    right: 400px;
+}

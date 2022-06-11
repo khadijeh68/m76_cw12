@@ -1,0 +1,59 @@
+@mixin flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin border-radius($radius) {
+    border-radius: $radius;
+}
+
+@mixin padding($top: null, $right: null, $bottom: null, $left: null) {
+    padding-top: $top;
+    padding-right: $right;
+    padding-bottom: $bottom;
+    padding-left: $left;
+}
+
+
+@mixin space($type: margin, $direction: all, $amount: $medium) {
+@if $type == padding {
+    @if $direction == all {
+        padding: $amount;
+    } @else if $direction == top {
+        padding-top: $amount;
+    } @else if $direction == left {
+        padding-left: $amount;
+    } @else if $direction == right {
+        padding-right: $amount;
+    } @else {
+        padding-bottom: $amount;
+    }
+} @else {
+@if $direction == all {
+margin: $amount;
+} @else if $direction == top {
+margin-top: $amount;
+} @else if $direction == left {
+margin-left: $amount;
+} @else if $direction == right {
+margin-right: $amount;
+} @else {
+margin-bottom: $amount;
+}
+}
+}
+
+
+@function calculateRem($size) {
+    $remSize: $size / 16px;
+    @return $remSize * 1rem;
+}
+
+@mixin font-size($size){
+   font-size: calculateRem($size);
+}
+
+@mixin myProperty($property, $value) {
+    #{$property}: $value;
+}

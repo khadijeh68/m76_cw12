@@ -1,0 +1,26 @@
+$cardImage: "../accets/images/card/1.jpg";
+
+.box{
+    border: 5px solid black;
+    // font-size: 12px;
+}
+
+.card{
+    background-color: $primary;
+    @include flex;
+    background: url(#{$cardImage});
+    @include border-radius(4px);
+    @include space(margin , top , $xlarge);
+    @extend .box;
+    @include font-size(10px);
+
+    &:hover{
+        background: red;
+    }
+    &_main{
+        font-size: 30px;
+    }
+    
+}
+
+
